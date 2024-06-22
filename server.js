@@ -88,6 +88,7 @@ app.post("/signup", async (req, res) => {
 
 app.post("/signin", async (req, res) => {
   const { email, password } = req.body;
+  console.log(email);
 
   try {
     const users = await pool.query("SELECT * FROM users WHERE email = $1", [
@@ -114,4 +115,4 @@ app.post("/signin", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on PORT ${PORT} :D`));
