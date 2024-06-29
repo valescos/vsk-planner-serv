@@ -1,7 +1,8 @@
 # Сервер
 ### _Node сервер для учебного проекта_
 
-Задеплоен на [render.com](https://render.com/).
+Сервер и база данных задеплоены на [render.com](https://render.com/). 
 
 #### Технологии:
 - Express
+- PostgreSQL
