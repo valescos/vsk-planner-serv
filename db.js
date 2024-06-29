@@ -7,9 +7,7 @@ const pool = new Pool({
   host: process.env.PGHOST,
   port: process.env.PGPORT,
   database: process.env.PGDATABASE,
-  ssl: process.env.PGSSL,
+  ssl: process.env.PGSSL === "true",
 });
-
-//  database: "todoapp_rjos",
 
 module.exports = pool;
