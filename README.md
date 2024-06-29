@@ -1,2 +1,7 @@
-# vsk-planner-serv
- Server for training project
+# Сервер
+### _Node сервер для учебного проекта_
+
+Задеплоен на [render.com](https://render.com/).
+
+#### Технологии:
+- Express
