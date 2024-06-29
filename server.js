@@ -95,7 +95,7 @@ app.post("/signin", async (req, res) => {
     ]);
 
     if (!users.rows.length) {
-      return res.json({ detail: "Юзер с таким именем не существует" });
+      return res.json({ detail: "Неверные пароль и/или логин" });
     }
 
     const succes = await bycrypt.compare(
@@ -107,7 +107,7 @@ app.post("/signin", async (req, res) => {
       const token = jwt.sign({ email }, "secret", { expiresIn: "1hr" });
       res.json({ email: users.rows[0].email, token });
     } else {
-      res.json({ detail: "Не получилось войти" });
+      res.json({ detail: "Неверные пароль и/или логин" });
     }
   } catch (err) {
     console.error(err);
